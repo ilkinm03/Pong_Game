@@ -26,8 +26,8 @@ screen.onkey(l_paddle.go_down, "s")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
-    ball.move() 
+    time.sleep(ball.move_speed)
+    ball.move()
     if ball.ycor() > HEIGHT / 2 - ball.width() or ball.ycor() < -HEIGHT / 2 - ball.width():
         ball.bounce_y()
     if (ball.distance(r_paddle) < 50 and ball.xcor() > WIDTH / 2 - 80) \
